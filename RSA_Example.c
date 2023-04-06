@@ -14,11 +14,7 @@ int * keygen (int * ptr, int inP, int inQ, int inE);
 
 int modExp (int message, int inE, int inN); 	 
 
-void question2_2();
-
-int question2_3and4(int num);
-
-void defaultFunction ();
+void rsa_cal();
 
 void program_pause();
 
@@ -27,19 +23,16 @@ int main()
 {
     int option;
 
-    question2_2();
+    rsa_cal();
 
     return 0;
 
 } 
 
 
-
-//*****************************************************************//
-//              BEGINNING OF QUESTION 2.2
 //****************************************************************//
 
-void question2_2()
+void rsa_cal()
 {
     int inP = 0, inQ = 0, inE = 0,
         inZ = 0, inN = 0, inD = 0,
@@ -79,9 +72,8 @@ void question2_2()
     printf("\n");
 
     keygen( array, inP, inQ, inE);
-
    
-    printf("In 2_2 function array address is: %p \n", array);
+    printf("In rsa_cal function array address is: %p \n", array);
 
     printf("Message (m) is: %d \n", m);
     
@@ -100,7 +92,6 @@ void question2_2()
     printf("\n");
 
 }
-
 
 
 
@@ -345,9 +336,6 @@ int modExp (int message, int inE, int inN)
 }
 
 
-
-//*****************************************************************//
-//                   END OF QUESTION 2.2
 //****************************************************************//
 
 void program_pause()
