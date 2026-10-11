@@ -30,7 +30,7 @@ int main()
 } 
 
 
-//****************************************************************//
+// **************************************************************** 
 
 void rsa_cal()
 {
@@ -53,21 +53,33 @@ void rsa_cal()
 
 
     printf("*** Enter non-zero intgers *** \n");
-    printf("If all zeros are entered then default values will be used. \n");
+    printf("Entered in 0 for default values will be used. \n");
     printf("default values are inP = 17, inQ = 11, inE = 7, and m = 88 \n");
     printf("These are the values of the example for the text book CSN on page 278. \n\n");
     
-    printf("Enter values for Message, inP, inQ, and inE: ");
+    printf("Enter values for inP: ");
     fflush(stdout);
-    scanf("%d %d %d %d", &m, &inP, &inQ, &inE);
+    scanf("%d", &inP);
     
-    if( inP == 0 && inQ == 0 && inE == 0 && m == 0 )
+    if( inP == 0 )
     {
     inP = 17;
     inQ = 11;
     inE = 7;
     m = 88;
+    }else
+    {
+    printf("Enter values for inQ: ");
+    fflush(stdout);
+    scanf("%d", &inQ );
+    printf("Enter values for inE: ");
+    fflush(stdout);
+    scanf("%d", &inE );
+    printf("Enter values for m: ");
+    fflush(stdout);
+    scanf("%d", &m );
     }
+
 
     printf("\n");
 
